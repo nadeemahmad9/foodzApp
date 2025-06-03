@@ -1,5 +1,6 @@
 import React from "react";
 import Hero from "./Components/Hero";
+import CarouselOffer from "./Components/CarouselOffer";
 
 const App = () => {
   return (
@@ -8,6 +9,7 @@ const App = () => {
         Navbar
       </h1>
       <Hero />
+      <CarouselOffer />
     </div>
   );
 };
