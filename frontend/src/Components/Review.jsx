@@ -108,25 +108,25 @@ const settings = {
  <section className="relative w-full max-w-xxs max-w-xs sm:max-w-[70vw] md:max-w-[70vw] lg:max-w-[90vw] mx-auto bg-white py-16 px-4">
   <motion.img
     src="/assets/reviewpizza.svg"
-    className="absolute top-20 left-[-35px] w-24 opacity-90 -rotate-23"
+    className="absolute top-30 left-10 w-24 opacity-90 -rotate-23"
     animate={{ y: [0, -12, 0] }}
     transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
   />
   <motion.img
     src="/assets/reviewburger.svg"
-    className="absolute top-1/4 right-[-55px] w-25 opacity-90 -rotate-20"
+    className="absolute top-1/4 right-5 w-25 opacity-90 -rotate-20"
     animate={{ y: [0, -8, 0] }}
     transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
   />
   <motion.img
     src="/assets/reviewjuice.svg"
-    className="absolute bottom-20 left-[-45px] w-24 opacity-90 rotate-20"
+    className="absolute bottom-20 left-0 w-24 opacity-90 rotate-20"
     animate={{ y: [0, -10, 0] }}
     transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
   />
   <motion.img
     src="/assets/reviewfries.svg"
-    className="absolute bottom-10 right-[-50px] w-22 opacity-90 -rotate-6"
+    className="absolute bottom-10 right-0 w-22 opacity-90 -rotate-6"
     animate={{ y: [0, -14, 0] }}
     transition={{ duration: 4.5, repeat: Infinity, ease: "easeInOut" }}
   />
