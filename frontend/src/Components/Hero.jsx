@@ -86,38 +86,44 @@ export default function Hero() {
     };
 
     return (
-        <div
-            className="relative w-full h-[70vh] overflow-hidden bg-gradient-to-br from-blue-950 via-black to-red-900 rounded-4xl transition-all duration-1000 ease-in-out"
-            onMouseEnter={() => setIsAutoPlaying(false)}
-            onMouseLeave={() => setIsAutoPlaying(true)}
-            style={{
-                backgroundImage: `url('${slides[currentSlide].backgroundImage}')`,
-                backgroundSize: 'cover',
-                backgroundPosition: 'center',
-                backgroundRepeat: 'no-repeat'
-            }}
-        >
-            {/* Dark Overlay for better text readability */}
-            <div className="absolute inset-0  bg-opacity-60 backdrop-blur-[1px]"></div>
+        <div className="relative  h-[50vh] sm:h-[55vh] md:h-[68vh] lg:h-[65vh] xl:h-[70vh] bg-gradient-to-br from-blue-950 via-black to-red-900 overflow-hidden rounded-3xl mt-18">
+            {/* Animated Decorations - Responsive positioning */}
+            <motion.div
+                className="absolute top-[8%] sm:top-[10%] left-4 sm:left-6 md:left-10 w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-green-400 rounded-lg opacity-80"
+                animate={{ rotate: [0, 360], scale: [1, 1.2, 1] }}
+                transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+            />
+            <motion.div
+                className="absolute top-[12%] sm:top-[15%] right-4 sm:right-8 md:right-20 w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 bg-orange-400 rounded-full opacity-70"
+                animate={{ y: [0, -20, 0], x: [0, 10, 0] }}
+                transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+            />
+            <motion.div
+                className="absolute bottom-[20%] sm:bottom-[15%] left-4 sm:left-8 md:left-20 w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 bg-red-400 rounded-full opacity-60"
+                animate={{ scale: [1, 1.5, 1] }}
+                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+            />
+            <motion.div
+                className="absolute bottom-[15%] sm:bottom-[10%] right-6 sm:right-16 md:right-32 w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16 bg-green-500 rounded-full opacity-50"
+                animate={{ rotate: [0, -360], scale: [1, 0.8, 1] }}
+                transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
+            />
 
-            {/* Video Background for first slide */}
-            {slides[currentSlide].hasVideo && (
-                <div className="absolute inset-0 z-0">
-                    <video
-                        autoPlay
-                        loop
-                        muted
-                        playsInline
-                        className="w-full h-full object-cover opacity-30"
-                    >
-                        <source src={slides[currentSlide].videoUrl} type="video/mp4" />
-                        Your browser does not support the video tag.
-                    </video>
+            {/* Badge - Responsive positioning and sizing */}
+            <motion.div
+                className="hidden md:block absolute top-4 sm:top-6 md:top-[5%] left-1/2 transform -translate-x-1/2 z-10 px-2"
+                initial={{ opacity: 0, y: -20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8 }}
+            >
+                <div className="flex items-center gap-1 sm:gap-2 bg-yellow-400 text-black px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm md:text-base font-medium">
+                    <span className="text-sm sm:text-base md:text-lg hidden sm:block">😋</span>
+                    <span className="hidden xs:inline">EASY WAY TO ORDER YOUR FOOD</span>
+                    <span className="hidden sm:block">ORDER FOOD EASILY</span>
                 </div>
-            )}
+            </motion.div>
 
             {/* Main Content Container */}
-
             <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 h-[50vh] sm:h-[55vh] md:h-[60vh] lg:h-[65vh] xl:h-[70vh] flex items-center">
                 <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-3 sm:gap-1 lg:gap-8 xl:gap-12 items-center w-full pt-12 sm:pt-12 md:pt-12 lg:pt-0">
 
@@ -226,6 +232,5 @@ export default function Hero() {
                 </div>
             </div>
         </div>
-
     );
 }
