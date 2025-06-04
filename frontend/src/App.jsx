@@ -1,5 +1,4 @@
 import React from "react";
-import Hero from "./Components/Hero";
 import Review from "./Components/Review";
 
 const App = () => {
