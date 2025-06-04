@@ -86,7 +86,7 @@ export default function Hero() {
     };
 
     return (
-        <div className="relative  h-[50vh] sm:h-[55vh] md:h-[68vh] lg:h-[65vh] xl:h-[70vh] bg-gradient-to-br from-blue-950 via-black to-red-900 overflow-hidden rounded-3xl mt-18">
+        <div className="relative  h-[50vh] sm:h-[55vh] md:h-[68vh] lg:h-[65vh] xl:h-[70vh] bg-gradient-to-br from-blue-950 via-black to-red-900 overflow-hidden rounded-3xl mt-5">
             {/* Animated Decorations - Responsive positioning */}
             <motion.div
                 className="absolute top-[8%] sm:top-[10%] left-4 sm:left-6 md:left-10 w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-green-400 rounded-lg opacity-80"
