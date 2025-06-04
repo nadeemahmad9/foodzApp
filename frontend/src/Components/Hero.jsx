@@ -87,9 +87,9 @@ export default function Hero() {
 
     return (
         <div
-            className="relative w-full h-[70vh] overflow-hidden rounded-4xl transition-all duration-1000 ease-in-out"
-            onMouseEnter={() => setIsAutoPlay(false)}
-            onMouseLeave={() => setIsAutoPlay(true)}
+            className="relative w-full h-[70vh] overflow-hidden bg-gradient-to-br from-blue-950 via-black to-red-900 rounded-4xl transition-all duration-1000 ease-in-out"
+            onMouseEnter={() => setIsAutoPlaying(false)}
+            onMouseLeave={() => setIsAutoPlaying(true)}
             style={{
                 backgroundImage: `url('${slides[currentSlide].backgroundImage}')`,
                 backgroundSize: 'cover',
