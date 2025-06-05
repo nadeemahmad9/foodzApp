@@ -1,11 +1,10 @@
 import React from "react";
 import Hero from "./Components/Hero";
 import Review from "./Components/Review";
-
 import Navbar from "./Components/Navbar";
-
 import CarouselOffer from "./Components/CarouselOffer";
 import CategorySlider from "./Components/categorySlider";
+import Footer from "./Components/Footer";
 
 
 const App = () => {
@@ -15,7 +14,9 @@ const App = () => {
       <Hero />
       <CategorySlider />
       <CarouselOffer />
-      <Review/>
+      <Review />
+      <Footer />
+
     </div>
   );
 };
