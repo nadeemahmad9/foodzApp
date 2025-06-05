@@ -4,6 +4,7 @@ import Hero from "./Components/Hero";
 import Navbar from "./Components/Navbar";
 
 import CarouselOffer from "./Components/CarouselOffer";
+import CategorySlider from "./Components/categorySlider";
 
 
 const App = () => {
@@ -11,6 +12,7 @@ const App = () => {
     <div className="min-h-screen bg-gray-100 py-2 px-4">
       <Navbar />
       <Hero />
+      <CategorySlider />
       <CarouselOffer />
     </div>
   );
