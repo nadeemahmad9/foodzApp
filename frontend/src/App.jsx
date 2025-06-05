@@ -13,12 +13,9 @@ const App = () => {
     <div className="min-h-screen bg-gray-100 py-2 px-4">
       <Navbar />
       <Hero />
-<<<<<<< HEAD
       <CategorySlider />
       <CarouselOffer />
-=======
       <Review/>
->>>>>>> review
     </div>
   );
 };
